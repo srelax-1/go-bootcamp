@@ -54,12 +54,15 @@ func PrimeOddNums(nums []int) []int{
             continue
         }
 
+		if val % 2 == 0 {
+			continue
+		}
 		
 
 		isPrime := true
 
         for i := 2; i*i <= val; i++ {
-            if val%i == 0 {
+            if val % i == 0 {
                 isPrime = false
                 break
             }
@@ -73,13 +76,15 @@ func PrimeOddNums(nums []int) []int{
 }
 
 func main() {
-	number := []int{1,2,3,4,5,6,7,8,9,10}
-	even := EvenNums(number)
-	odd := OddNums(number)
-	prime := PrimeNums(number)
-	fmt.Printf("These are the even number: %d\n", even)
-	fmt.Printf("These are the odd number: %d\n", odd)
-	fmt.Printf("These are the odd number: %d\n", prime)
+	number := []int{1,2,3,4,5,6,7,8,9,10,2}
+	// even := EvenNums(number)
+	// odd := OddNums(number)
+	// prime := PrimeNums(number)
+	primeOdd := PrimeOddNums(number)
+	// fmt.Printf("These are the even number: %d\n", even)
+	// fmt.Printf("These are the odd number: %d\n", odd)
+	// fmt.Printf("These are the odd number: %d\n", prime)
+	fmt.Printf("These are the odd number: %d\n", primeOdd)
 }
 
 

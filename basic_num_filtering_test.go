@@ -71,3 +71,37 @@ func TestPrimeNums(t *testing.T) {
 		t.Errorf("Expected %v, got %v", expected, result)
 	}
 }
+
+func TestPrimeOddNums(t *testing.T) {
+    result := PrimeOddNums([]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10})
+    slices.Sort(result)
+
+    if len(result) == 0 {
+        t.Fatal("Expected odd prime numbers, got an empty array")
+    }
+
+    for _, num := range result {
+        if num <= 1 {
+            t.Errorf("%d is not a prime number", num)
+            continue
+        }
+
+        if num%2 == 0 {
+            t.Errorf("%d is an even number", num)
+            continue
+        }
+
+        for i := 2; i*i <= num; i++ {
+            if num%i == 0 {
+                t.Errorf("%d is not a prime number", num)
+                break
+            }
+        }
+    }
+
+    expected := []int{3, 5, 7}
+
+    if !slices.Equal(result, expected) {
+        t.Errorf("Expected %v, got %v", expected, result)
+    }
+}
