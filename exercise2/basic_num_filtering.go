@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// Even Number filtering
+// Story 1: Given a list of integers, write a program to return only the even numbers from this list.
 func EvenNums(nums []int) []int{
 	var result []int
 	for _, val := range nums {
@@ -13,7 +13,7 @@ func EvenNums(nums []int) []int{
 	return result
 }
 
-// Odd Number filtering
+// Story 2: Given a list of integers, write a program to return only the odd numbers from this list.
 func OddNums(nums []int) []int{
 	var result []int
 	for _, val := range nums {
@@ -24,7 +24,7 @@ func OddNums(nums []int) []int{
 	return result
 }
 
-// Prime Number filtering
+// Story 3: Given a list of integers, write a program to return only the prime numbers from this list.
 func PrimeNums(nums []int) []int{
 	var result []int
 	for _, val := range nums {
@@ -48,7 +48,7 @@ func PrimeNums(nums []int) []int{
 	return result
 }
 
-// Prime Odd Number filtering
+// Story 4: Given a list of integers, write a program to return only the odd prime numbers from this list.
 func PrimeOddNums(nums []int) []int{
 	var result []int
 	for _, val := range nums {
@@ -76,6 +76,7 @@ func PrimeOddNums(nums []int) []int{
 	return result
 }
 
+// Story 5: Given a list of integers, write a program to return only the even and multiples of 5 from this list.
 func EvenMultiplyFive(nums []int) []int{
 	var result []int
 	for _, val := range nums {
@@ -85,6 +86,16 @@ func EvenMultiplyFive(nums []int) []int{
 	}
 	return result
 }
+
+// Story 6: Given a list of integers, write a program to return only the odd and multiples of 3 greater than 10 from this list.
+
+// Story 7: Given a list of integers, and a set of conditions (odd, even, greater than 5, multiple of 3, prime, and many more such 
+// custom conditions that may be dynamically defined by user), write a program to return only the integers from the given list that 
+// match ALL the conditions.
+
+// Story 8: Given a list of integers, and a set of conditions (odd, even, greater than 5, multiple of 3, prime, and many more such 
+// custom conditions that may be dynamically defined by user), write a program to return only the integers from the given list that 
+// match ANY of the conditions.
 
 func main() {
 	number := []int{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20}
