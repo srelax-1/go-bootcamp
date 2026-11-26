@@ -105,3 +105,26 @@ func TestPrimeOddNums(t *testing.T) {
         t.Errorf("Expected %v, got %v", expected, result)
     }
 }
+
+func TestEvenMultiplyFive(t *testing.T) {
+	// result := []int{10, 20}
+    result := EvenMultiplyFive([]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20})
+    
+
+    if len(result) == 0 {
+        t.Fatal("Expected Multiply of 5 that are evennumbers, got an empty array")
+    }
+
+    for _, num := range result {
+        if num % 5 != 0 && num % 2 != 1 {
+            t.Errorf("%d is not a multiply of 5 that are even number", num)
+            continue
+        }
+    }
+
+    expected := []int{10, 20}
+
+    if !slices.Equal(result, expected) {
+        t.Errorf("Expected %v, got %v", expected, result)
+    }
+}
