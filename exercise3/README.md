@@ -47,23 +47,14 @@ Your implementation must parse `grades.csv` into a `[]student` slice and solve t
 
 ---
 
-## Self-Evaluation & Code Review Checklist
+## Submission
 
-Use the guidelines below to review and refine your solution:
+This is the link to my student grading problem [one2nc/student-grading-go](https://github.com/srelax-1/student-grading-go).
 
-### Go Idioms & Architecture
-- [ ] **Resource Management:** Are you closing the CSV file properly after use with a `defer` block?
-- [ ] **Code Reuse:** Are you reusing `findOverallTopper` inside `findTopperPerUniversity` after grouping students by university?
-- [ ] **Data Structures:** Are you using `map[string]studentStat` in the `findTopperPerUniversity` method?
-- [ ] **Stringer Implementation:** Have you implemented the `String()` method (`fmt.Stringer`) for the `Student` struct so it prints cleanly with `fmt.Println`? *(Bonus / nice-to-have)*
+Also below here I am sharing the screenshot to how my solution passed all the test.
 
-### Naming & Style Conventions
-- [ ] **Verb-Based Methods:** Do your function and method names start with verbs (e.g., `parseCSV`, `calculateGrade`, `findOverallTopper`)?
-- [ ] **Concise Naming:** Are variable and method names short and idiomatic to Go?
-- [ ] **No Type Names in Variables:** Have you avoided embedding data types in variable names (e.g., using `name` instead of `strName`)?
-- [ ] **Left-Indentation:** Is your code left-indented as much as possible (e.g., using early returns to avoid unnecessary `else` blocks)?
+Image of my test that passed.
+![Test Screenshot](./test.png)
 
-### Error Handling & Testing
-- [ ] **Pure Functions:** Do functions return values rather than printing directly to the console to minimize side effects?
-- [ ] **Error Propagation:** Do functions follow the *handle or declare* rule by returning `(value, error)` pairs?
-- [ ] **Edge-Case Testing:** For functions returning collections (arrays, slices, maps), have you written test cases covering **0**, **1**, and **many** elements?
+![Terminal Screenshot](./image.png)
+
